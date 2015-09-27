@@ -1,15 +1,7 @@
 <?php
 
-//print_r($_GET);
-//print_r($_POST);
-
 $requestBody = file_get_contents('php://input');
 $requestData = json_decode($requestBody);
-
-//echo $requestBody;
-//print_r($requestData);
-//
-//die();
 
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -46,3 +38,5 @@ if ($resourceId === null) {
         echo '{"id":18,"title":"Lorem ipsum","text":"Ut lobortis dui eget sem dignissim, maximus tincidunt eros pretium. Cras commodo vulputate nisl, in maximus sem eleifend in. Morbi elit diam, varius a dapibus ut, tincidunt ac dui. Nulla in sollicitudin ipsum, sed faucibus nunc. Aenean sollicitudin placerat rhoncus. Nullam lobortis arcu et quam dignissim, quis eleifend est vulputate. Mauris nec sodales odio, eget mollis dui. Praesent finibus porttitor dolor id ultricies. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fringilla varius vestibulum. Vestibulum placerat viverra rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Integer sollicitudin aliquet varius. Nulla lectus est, rhoncus non urna eget, rhoncus laoreet libero.","price":"118.99","categoryId":5}';
     }
 }
+
+exit();
