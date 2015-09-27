@@ -2,7 +2,9 @@ Options +FollowSymlinks
 RewriteEngine on
 
 Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
+Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?api=$1 [NC]
+RewriteRule ^(.*)$ index.php?api=$1 [NC,QSA]
