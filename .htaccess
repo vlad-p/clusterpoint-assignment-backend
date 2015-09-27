@@ -1,0 +1,8 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+Header set Access-Control-Allow-Origin "*"
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?api=$1 [NC]
